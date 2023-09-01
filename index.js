@@ -30,7 +30,7 @@ app.get('/api/:date', (req, res, next) => {
       const dateFromUnix = new Date(unixDate);
       res.json({
         unix: dateFromUnix.getTime(),
-        utx: dateFromUnix.toUTCString(),
+        utc: dateFromUnix.toUTCString(),
       });
     } else {
       res.json({
@@ -40,7 +40,7 @@ app.get('/api/:date', (req, res, next) => {
   } else {
     res.json({
       unix: date.getTime(),
-      utx: date.toUTCString(),
+      utc: date.toUTCString(),
     });
   }
 });
@@ -49,7 +49,7 @@ app.get('/api/', (req, res) => {
   const dateNow = new Date();
   res.json({
     unix: dateNow.getTime(),
-    utx: dateNow.toUTCString(),
+    utc: dateNow.toUTCString(),
   });
 });
 
