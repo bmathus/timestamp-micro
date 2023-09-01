@@ -62,3 +62,5 @@ app.use((req, res) => {
 var listener = app.listen(process.env.PORT, function () {
   console.log('Your app is listening on port ' + listener.address().port);
 });
+
+module.exports = app;
